@@ -48,10 +48,11 @@ function addTask(){
     console.log(taskCount);
     document.querySelector('.container-tasks').innerHTML+= `
      <div id="task-${taskCount}" class="task blue darken-4">
-            <div class="task-description">${taskCount}
+            <div class="task-description">
+                <p class="task-count">${taskCount}</p>
                 <p class="task-content">${inputValue}</p>
             </div>
-            <button class="waves-effect waves-light btn-small red darken-4" onclick="removeTask(${taskCount})">Eemalda</button>
+            <button class="waves-effect waves-light btn-small red darken-4 btn-task-remove" onclick="removeTask(${taskCount})">Eemalda</button>
         </div>
     `;
 
@@ -73,7 +74,8 @@ function sendMail(){
 }
 function removeTask(number){
 
-    const value = document.querySelector(`#task-${number}>div>p`).innerHTML;
+    const value = document.querySelector(`#task-${number} > div > p.task-content`).innerHTML;
+
     console.log(value);
     console.log('removed task' + number);
     $.ajax({
