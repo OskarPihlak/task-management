@@ -1,0 +1,21 @@
+<div class="task-container">
+    <div class="container-add-task blue darken-2">
+        <div class="task-input">
+            <label for="add-task" class="add-task-label">Lisa ülesanne</label>
+            <input id="add-task" class="add-task-input">
+            <button id="button-add-task" class="waves-effect waves-light btn-small" onclick="addTask()">Lisa</button>
+        </div>
+    </div>
+    <div class="container-tasks">
+        {{#each data}}
+            <div id="task-{{@index}}" class="task blue darken-4">
+                <div class="task-description">
+                    <p class="task-count">{{this.id}}</p>
+                    <p class="task-content">{{this.data}}</p>
+                </div>
+                <button class="waves-effect waves-light btn-small red darken-4 btn-task-remove" onclick="removeTask({{@index}})">Eemalda</button>
+            </div>
+        {{/each}}
+    </div>
+    <button id="send-email" class="btn waves-effect waves-light btn-medium" onclick="sendMail()">Saada meil</button>
+</div>

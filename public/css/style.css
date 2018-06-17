@@ -1,0 +1,60 @@
+/* id-s */
+#add-task{
+    width: 92%;
+    border-bottom: 1px solid #ffffff;
+}
+#send-email {
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+/* classes */
+.logo{
+  margin: 0 0 0 10px;
+}
+.cotainer-add-task{
+    position: relative;
+}
+.add-task-label{
+    color: white;
+    display: block;
+}
+.add-task-input{
+    color: white;
+}
+.task-input{
+    margin: 5px;
+    padding: 5px;
+}
+.container-tasks{
+    min-height: 200px;
+}
+.task{
+    min-height: 60px;
+    width: 100%;
+    color: white;
+    display: table;
+    margin: 7px;
+    position: relative;
+}
+.task-description{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    width: 85%;
+    margin: 0 10px 0 10px;
+}
+.task-count{
+    margin: auto;
+    position: absolute;
+    top: 10px;
+    bottom: 0;
+    left: 10px
+}
+.btn-task-remove{
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+}
